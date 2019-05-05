@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>League of Legends</title>
+  <link rel="stylesheet" href="New.css" type="text/css">
+</head>
+
+<body>
+   <div class="menu">
+    <ul>
+      <li>
+        <a href="#">Official</a>
+        <ul class="sub">
+          <li><a href="https://lol.garena.tw/preindex">Taiwan</a></li>
+          <li><a href="https://lol.qq.com/">China</a></li>
+          <li><a href="https://jp.leagueoflegends.com/ja/">Japan</a></li>
+        </ul>
+      </li>
+    </ul>
+   
+    <ul>
+      <li>
+        <a href="News.html">News</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="quest.html">Questionnaire</a>
+      </li>
+    </ul>
+   <ul>
+      <li>
+        <a href="index.html">Main page</a>
+      </li>
+    </ul>
+  </div>
+<!-- --------------------------------------------------------------------------- -->
+  <div id="header-container">
+
+    <img id="BG" src="Teemo_0.jpg" alt="Error! The picture is not showing" style="width: 100%; height: 100%;">
+    <div id="Icon">
+      <img src="TeemoIcon.png" alt="Error! The picture is not showing">
+      <div id="ShowMsg"><img src="msg.png" alt=""></div>
+    </div>
+    <div id="header-name">Teemo <br>The Swift Scout</div>
+
+
+
+  </div>
+  <div id="flex-container">
+
+    <div id="StoryTime">
+      <h2>STORY</h2>
+      <span id="Stroy">Teemo is a legend among his yordle brothers and sisters in Bandle City. As far as yordles are concerned, there is something just slightly off about him. While Teemo enjoys the companionship of other yordles, he also insists on frequent solo missions in the ongoing defense of Bandle City. Despite his genuinely warm personality, something switches off inside Teemo's mind during combat so that the lives he must end while on patrol do not burden him. Even as a young recruit, the drill instructors and other trainees found it a little disconcerting that, while Teemo was normally charming and kind, he turned deadly serious and highly efficient the minute combat exercises began. Teemo's superiors quickly steered him toward the Scouts of the Mothership, which is one of Bandle City's most distinguished Special Forces unit alongside the Megling Commandos. <br><br>While most yordles do not handle solo scouting missions with a great deal of finesse, Teemo is remarkably efficient at them. His record of success in defending Bandle City from infiltrators easily makes him one of the most dangerous yordles alive, though you'd never know it by having a cup of honey mead with him at his favorite inn. His signature weapon - a blowgun - uses a rare ajunta poison he personally gathers from the jungles of Kumungu. To help cope with his lengthy periods of isolation, Teemo recently struck up a friendship with Tristana, a fellow member of Bandle City's Special Forces. Teemo is a pint-sized foe that many have come to fear and whose small size belies his fearsome resolve.</span>
+    </div>
+    <div id="Overview">
+      <h2>Runes</h2>
+      <div id="toolbar">
+        <div id="Runes">
+          <img id="num1" src="aery.png" alt="">
+          <img id="num2" src="grasp.png" alt="">
+        </div>
+      </div>
+      <div id="RuneImage_Box">
+        <img id="Main_img" src="TeemoAeryGreen.png" alt="">
+      </div>
+    </div>
+    <script>
+      var images = ['TeemoAeryGreen.png', 'TeemoGraspGreen.png'];   /*------set the images in the array------*/
+      var changeImage = function(num) {
+        document.getElementById('Main_img').src = images[num];
+      }
+      document.getElementById('num1').onclick = function() {
+        changeImage(0);
+      };
+      document.getElementById('num2').onclick = function() {
+        changeImage(1);
+      };
+    </script>
+
+    <div id="slider">
+      <h2>&nbsp;Other Champions</h2>
+      <figure>
+        <a href="Lulu.html"><img src="ResizeLULU.jpg" alt=""></a>
+        <a href="New.html"><img src="ResizeTEEMO.jpg" alt=""></a>
+        <a href="Veigar.html"><img src="ResizeVEIGAR.jpg" alt=""></a>
+      </figure>
+    </div>
+    
+    <div id="invisibility">
+      <h2>Hide</h2>
+      <a href="#invisibility" id="Yes" onclick="BeHidden()" onmousedown="laugh.play()">Yes</a>
+      <div>OR</div>
+      <a href="#invisibility" id="No" onclick="BeVisible()" onmousedown="laugh.play()">No</a><br>
+      <div ><img id="TeemoHide" src="resizeTPTeemo70.png" alt=""></div>
+      
+      <script>
+        function BeHidden(){  /*------set events when it triggers the method------*/
+          var Teemo = document.getElementById('TeemoHide');
+          Teemo.style.visibility = "hidden";
+        }
+        function BeVisible(){ /*------set events when it triggers the method------*/
+          var Teemo = document.getElementById('TeemoHide');
+          Teemo.style.visibility = "visible";
+        }
+        var laugh = new Audio();
+        laugh.src = "Teemolaugh.ogx";
+      </script>
+    </div>
+    
+    
+    <div id="Video">
+      <h2>Video</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Qj48qHM1MXE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+    </div>
+
+    <div id="build">
+      <h2>Recommended Build</h2>
+      <img src="TeemoBuild.png" alt=""><br>
+      
+      
+      <img id="bushA" src="ResizeBushHere.png" alt="" onmouseover="setTeemo()" onmouseout="setHereBush()"> 
+      
+      <script>
+        function setTeemo() { /*------set events when it triggers the method------*/
+          document.getElementById("bushA").src="resizeTPTeemoHut.png";
+        }
+        
+        function setHereBush() { /*------set events when it triggers the method------*/
+          document.getElementById("bushA").src="ResizeBushHere.png";
+        }
+      </script>
+      
+      <img id="bushB" src="ResizeBushOverHere.png" alt="" onmouseover="setShroom()" onmouseout="setOHBush()"> 
+      
+      <script>
+        function setShroom() { /*------set events when it triggers the method------*/
+          document.getElementById("bushB").src="ShroomDEAD.png";
+        }
+        
+        function setOHBush() { /*------set events when it triggers the method------*/
+          document.getElementById("bushB").src="ResizeBushOverHere.png";
+        }
+      
+      </script>
+      
+    </div>
+
+    <div id="Top"><a href="#header-container">Back To Top</a></div>
+    
+
+  </div>
+</body></html>

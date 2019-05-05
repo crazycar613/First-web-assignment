@@ -1,0 +1,247 @@
+
+body{
+  background-color: #1d1d1a;
+  background: url(mainbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/*------header------*/
+
+#header-container{
+  margin: 50px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  flex-flow: row wrap;
+  box-shadow: 4px 4px 20px 3px #000000;
+}
+
+#Icon{
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+#header-name{
+  position: absolute;
+  top: 80px;
+  left: 230px;
+  font-size: 25px;
+  font-family: Georgia;
+  color:#f8dd45;
+  text-shadow: 3px 1px 1px rgba(0,0,0,0.5) ;
+}
+
+#ShowMsg{
+  display: none;
+  
+}
+
+#Icon:hover{
+  transform: translateX(450px);
+  transition: 2s;
+}
+
+#Icon:hover #ShowMsg{
+  display: block;
+
+}
+
+/*-----body--------*/
+
+#Overview, #slider,  #StoryTime, #Video, #build, #Top{
+  background: hsl(106, 10%, 26%);
+  border-radius: 12px;
+  opacity: 0.9;
+  box-shadow: 4px 4px 15px 3px #000000;
+  padding: 10px;
+  margin: 5px;
+  color: #f8dd45;
+}
+
+#flex-container{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+h2{
+  line-height: 0.01;
+}
+
+#StoryTime{
+  width: 100%;
+  order:1;
+}
+
+
+#Overview{
+  width: 100%;
+  order:2;
+}
+
+#Video{
+  width: auto;
+  order:4;
+}
+
+#build{
+  flex-grow: 1; 
+  text-align: center;
+  order:5;
+}
+
+#GuessThatBushA{
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: all 1s;
+}
+
+#GuessThatBushA:hover{
+  transform: rotateY(180deg);
+}
+
+#bushA{
+  position: absolute;
+  backface-visibility: hidden;
+  
+}
+
+TeemoHere{
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+
+
+/*-----body for js----*/
+
+#toolbar {
+  text-align: center;
+}
+
+#Runes {
+  display: flex;
+  justify-content: space-around;
+}
+
+#RuneImage_Box {
+  text-align: center;
+}
+
+
+
+/*-----Slider------*/
+
+@-webkit-keyframes slider {
+  0%{
+    left: 0;
+  }
+  
+  25%{
+    left: 0;
+  }
+  
+  
+  50%{
+    left: -100%;
+  }
+  
+  75%{
+    left: -100%;
+  }
+  
+  95%{
+    left: -200%;
+  }
+  
+  100%{
+    left: -300%;
+  }
+  
+}
+
+@keyframes slider {
+  0%{
+    left: 0;
+  }
+  
+  25%{
+    left: 0;
+  }
+  
+  
+  50%{
+    left: -100%;
+  }
+  
+  75%{
+    left: -100%;
+  }
+  
+  95%{
+    left: -200%;
+  }
+  
+  100%{
+    left: -300%;
+  }
+  
+}
+
+#slider{
+  overflow: hidden;
+  width: 608px;
+  padding-left: 0;
+  padding-right: 0;
+  order:3;
+}
+
+#slider figure img{
+  width: 20;
+  float: left;
+}
+
+#slider figure {
+  position: relative;
+  width: 300%;
+  margin: 0;
+  left: 0;
+  animation: 10s slider infinite;
+}
+
+/*---footer--*/
+#Top{
+  border: 1px solid black;
+  background: yellow;
+  margin-left: 45%;
+  margin-right: 45%;
+  text-align: center;
+  order:6;
+  display: inline;
+}
+
+#Top a{
+  text-decoration: none;
+  
+}
+
+/*---small--*/
+@media only screen and (max-width:800px){
+ 
+  #build{
+    width: 100%;
+    order:3;
+  }
+  #slider{
+    order:4;
+  }
+  #Video{
+    order: 5;
+    display: none;
+  }
+ 
+}
+

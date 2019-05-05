@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Questionnaire</title>
+  <link rel="stylesheet" href="quest.css" type="text/css">
+</head>
+<body>
+ <!----------------------- MENU ---------------------------------->
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="#">Official</a>
+        <ul class="sub">
+          <li><a href="https://lol.garena.tw/preindex">Taiwan</a></li>
+          <li><a href="https://lol.qq.com/">China</a></li>
+          <li><a href="https://jp.leagueoflegends.com/ja/">Japan</a></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <ul>
+      <li>
+        <a href="#">Hero</a>
+        <ul class="sub">
+          <li><a href="New.html">Teemo</a></li>
+          <li><a href="Lulu.html">Lulu</a></li>
+          <li><a href="Veigar.html">Veigar</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="News.html">News</a>
+      </li>
+    </ul>
+    
+    <ul>
+      <li>
+        <a href="index.html">Main page</a>
+      </li>
+    </ul>
+  </div>
+<!-- -------------------------------quest body-------------------------------------------- -->
+<br>
+ <form name="f1"  onSubmit="message();">
+  <fieldset>
+   <!----------------------- Personal information---------------------------------->
+    <legend>
+      Personal Details
+    </legend>
+    <div id="bgb">
+    <div>*:Must have information</div><br>
+    <img id="icon1" src="image/icon.jpg" alt="">
+    <!----------------------- name---------------------------------->
+    *Name: <input type="text" name="name" pattern="[A-Za-z]*" title="Your English Name" required>&emsp;
+    <br>
+    <!----------------------- gender---------------------------------->
+    *Gender: <input  type="radio" name="gender" value="M" checked required>Male &emsp;
+            <input  type="radio" name="gender" value="F">Female
+    <br>
+    <!----------------------- phone num---------------------------------->
+    Phone number: <input type="text" name="phonenum" pattern="[0-9]{8}" title="input 8 dight '0-9'">
+    <br>
+    <!----------------------- email ---------------------------------->
+    *E-mail:<input type="email" required>
+    <br>
+    <!----------------------- Ladder tournamet ---------------------------------->
+    *Ladder tournament：
+    <select name="Ranking">
+      <option value="B">Non</option>
+      <option value="B">Bronze</option>
+      <option value="B">Silver</option>
+      <option value="B">Gold</option>
+      <option value="B">Platinum</option>
+      <option value="A">Diamond</option>
+      <option value="A">Challenger or Master</option>
+    </select>
+    <div id="rank_message"></div>
+    </div>
+  </fieldset>
+  <br>
+  <!----------------------- Questionaire---------------------------------->
+  <fieldset>
+    <legend>Questionnaire</legend>
+    <div id="bgb">
+    <div id="c_img">
+      <img id="c1_img" src="image/default_icon.png" alt="">
+    </div>
+    <!----------------------- favourite hero ---------------------------------->
+    *Which of the following is your favorite hero? <br>
+    <input type="radio" name="FH"  value="T" required onclick=change(); >Teemo  &emsp;
+    <input type="radio" name="FH"  value="V" onClick=change(); >Veigar  &emsp;
+    <input type="radio" name="FH"  value="L" onclick=change(); >Lulu
+    <br>
+     <br>
+     <!----------------------- why play lol ---------------------------------->
+    Why you want to play LOL?
+    <br>
+    <textarea name="" id="" cols="50" rows="4">In less 200 words...</textarea>
+    <br>
+    <br>
+    <!----------------------- feel of lol ---------------------------------->
+    What do you feel when you play LOL?
+    <br>
+   <input list="list" name="list">
+    <datalist id="list">
+      <option value="Very Good"/>
+      <option value="Good"/>
+      <option value="Toxic"/>
+    </datalist>
+    <div id="feel_message"></div>
+    <br>
+    <br>
+    <!----------------------- time of playing ---------------------------------->
+    *How many hours you will spend to play this game in a day?
+    <br>
+    <input type="number" name="hours" min="0" max="24">
+    <div id="time_message"></div>
+    <br><br>
+    <!----------------------- what hero want know more---------------------------------->
+    What hero do you want know more detail?<br>
+    <input type="text" name="hero" id="hero" pattern="[A-Za-z]*" required>
+    <br><br>
+    <!----------------------- just for fun ---------------------------------->
+    Do you have a girlfriend?<br>
+    <input type="radio" name="FFF" value="life">No &emsp;
+    <input type="radio" name="FFF" value="dead"  onclick=change2();>Yes
+    
+    </div>
+  </fieldset>
+  <br>
+  <!----------------------- button ---------------------------------->
+  <div align="center"> 
+  <button type="submit">submit</button>
+  <button type="reset" id="b1">reset</button>
+  <button type="button" id="b1" onclick="message2()">evaluate</button>
+  </div>
+  </form>
+<script>
+  /*------set the imgs in a array------*/
+  var images=['image/lulutIcon.jpg','image/timoIcon.jpg','image/vegarIcon.jpg'];
+   function change(){ /*------change the img------*/
+   if(document.f1.FH.value=="T")
+     document.getElementById('c1_img').src= images[1];
+   if(document.f1.FH.value=="V")
+       document.getElementById('c1_img').src= images[2];
+   if(document.f1.FH.value=="L")
+       document.getElementById('c1_img').src= images[0];
+  };
+   /*------change the img------*/
+  var images2 = ['image/deal.jpg']
+  function change2(){
+    if(document.f1.FFF.value=="dead")
+      document.getElementById('icon1').src= images2[0];
+  };
+  
+ /*------print the complete message------*/
+  function message(){
+    var msg = 'Thanks for complete our questionnaire';
+    alert(msg);
+  }
+  
+  function message2(){/*------print the message for user input------*/
+    var obj = document.querySelector('#time_message');
+    var objrank = document.querySelector('#rank_message');
+    var objbutton = document.querySelectorAll('#b1');
+    var ranking = document.f1.Ranking.value;
+    var hours = document.f1.hours.value;
+    if(hours >= 7){/*------print the message and add the class------*/
+      obj.innerHTML = 'Please play the game properly and pay attention to your health.';
+      obj.classList.add("textdiv");
+    }
+    if(hours < 7){
+      obj.innerHTML = 'You have a balanced life!!!';
+      obj.classList.add("textdiv");
+    }
+    
+    if(ranking == "B"){
+       objrank.innerHTML = 'You are still a rookie player. Become more strong!! ';
+       objrank.classList.add("textdiv2");
+       }
+    if(ranking == "A"){
+      objrank.innerHTML = 'You are a game genius, keep on going!! ';
+      objrank.classList.add("textdiv2");
+    }
+    /*------display none------*/
+    for(var i=0; i < objbutton.length;i++){
+      objbutton[i].classList.add("textdiv3");
+    }
+  }
+  
+</script>
+</body>
+</html>

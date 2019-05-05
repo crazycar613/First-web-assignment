@@ -1,0 +1,137 @@
+body {/*------design the background image------*/
+  background-image: url(image/mainbg.jpg);
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+  font-family: Georgia;
+}
+/*<!------------------------menu------------------!>*/
+/*------design a tags for the menu------*/
+.menu ul {
+  border: 1px solid blue;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  background-color: #724951;
+  display: inline-block;
+  box-shadow: white -0.4em 0em 0.4em;
+  font-size: 20px;
+  z-index: 1;
+}
+/*------design the menu while howering------*/
+.menu a {
+  border: 1px solid white;
+  padding: 10px;
+  line-height: 1.2em;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #66bab1;
+  color: black;
+}
+
+.menu .sub {
+  position: absolute;
+}
+
+.menu .sub a:hover {
+  background-color: lightblue;
+}
+
+.menu .sub li {
+  overflow: hidden;
+  height: 0px;
+  transition: height 400ms;
+}
+
+.menu ul li:hover .sub li {
+  height: 40px;
+}
+
+/* --------------------------- */
+.title{/*------design the news title------*/
+  text-align: center;
+  font-size: 35px;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.content {/*------set the the body panels------*/
+  background: hsl(106, 10%, 26%);
+  border-radius: 12px;
+  opacity: 0.9;
+  box-shadow: 4px 4px 15px 3px #000000;
+  padding: 15px;
+  margin: 15px 50px 50px 50px;
+  color: #f8dd45;
+  font-size: 28px;
+}
+
+.gap{/*------set the border to put the news------*/
+  border: 3px solid white;
+  border-radius: 5px;
+  box-shadow: 15px 15px rgba(167, 133, 133, 0.61);
+  margin: 10px;
+  padding: 15px 0px 0px 0px;
+  height: 380px;
+  overflow: auto;
+}
+
+.header{/*------set the  news header------*/
+  text-align: center;
+  text-shadow: black 0.1em 0.2em 0.1em
+}
+
+
+#photo,#photo2,#photo3 {/*------set the img size------*/
+  margin: 0px 25px 0px 25px;
+  height: 250px;
+  width: 300px;
+  float: left;
+}
+
+.R, .I, .F {/*------set the border for user click------*/
+  border: 3px solid black;
+  border-radius:100%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
+/*------set the effect when the border is hover------*/
+.R:hover{
+  background-color: white;
+}
+
+.I:hover{
+  background-color: white;
+}
+
+.F:hover{
+  background-color: white;
+}
+/*----- if the border hava been click add this class------*/
+.R2, .I2, .F2{
+  background-color: white;
+}
+
+
+.select {/*------set the opsiton of the select border------*/
+  float: left;
+  position: relative;
+  top: 270px;
+  right: 240px;
+  
+}
+
+.News1 {/*------design of the news content------*/
+  position: relative;
+  right: 100px;
+  display: flex;
+  font-size: 35px;
+  color: yellow;
+}

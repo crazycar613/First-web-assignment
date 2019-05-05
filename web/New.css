@@ -1,0 +1,318 @@
+
+body{  /*------design the background image------*/
+  background-color: #1d1d1a;
+  background: url(mainbg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/*------header------*/
+
+#header-container{ /*------design the champion header panel------*/
+  margin: 50px;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  display: flex;
+  box-shadow: 4px 4px 20px 3px #000000;
+}
+
+#Icon{ /*------design the icon of the header------*/
+  position: absolute;
+  top: 140px;
+  left: 100px;
+  z-index: 1;
+  cursor: grab;
+}
+
+#header-name{ /*------champion name------*/
+  position: absolute;
+  top: 160px;
+  left: 230px;
+  font-size: 25px;
+  font-family: Georgia;
+  color:#f8dd45;
+  text-shadow: 3px 2px 3px white;
+}
+
+#ShowMsg{ /*------design the the message what the champion wants to say------*/
+  display: none;
+  
+}
+
+#Icon:hover{  /*------move the icon while hovering------*/
+  transform: translateX(450px);
+  transition: 2s;
+}
+
+#Icon:hover #ShowMsg{ /*------display the msg while hovering------*/
+  display: block;
+
+}
+
+/*-----body--------*/
+
+#Overview, #slider,  #StoryTime, #Video, #build, #Top, #invisibility{ /*------design the body panels------*/
+  background: hsl(106, 10%, 26%);
+  border-radius: 12px;
+  opacity: 0.9;
+  box-shadow: 4px 4px 15px 3px #000000;
+  padding: 10px;
+  margin: 5px;
+  color: #f8dd45;
+}
+
+#flex-container{  /*------allow the panel to stick together------*/
+  display: flex;
+  flex-flow: row wrap;
+}
+
+h2{ /*------change the style for every H2 title------*/
+  line-height: 0.01;
+  text-shadow: 1px 2px 8px #4d00c9;
+}
+
+#StoryTime{  /*------design the story panel------*/
+  width: 100%;
+  order:1;
+  font-size: 20px;
+}
+
+
+#Overview{ /*------design the rune panel------*/
+  width: 100%;
+  order:2;
+}
+
+#Video{ /*------design the video panel------*/
+  width: auto;
+  order:4;
+  text-align: center;
+  flex-grow: 1;
+}
+
+#invisibility{ /*------design the teemo panel------*/
+  order:4;
+  flex-grow: 5;
+  text-align: center;
+  visibility: visible;
+  
+}
+
+
+#build{ /*------design the build panel------*/
+  flex-grow: 5; 
+  text-align: center;
+  order:5;
+}
+
+#Yes, #No{ /*------design the a tags for teemo panel------*/
+  text-decoration: none;
+  font-size: 30px;
+  color: yellow;
+}
+
+#toolbar { /*------design runes panel align------*/
+  text-align: center;
+}
+
+#Runes {  /*------design runes panel align------*/
+  display: flex;
+  justify-content: space-around;
+}
+
+#RuneImage_Box { /*------design runes panel align------*/
+  text-align: center;
+}
+
+#num1:hover, #num2:hover { /*------design cursor when mouse is on the icons------*/
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+
+
+/*-----Slider------*/
+
+@-webkit-keyframes slider { /*------enable effect on the website and design the duration of how the animation should move------*/
+  0%{
+    left: 0;
+  }
+  
+  25%{
+    left: 0;
+  }
+  
+  
+  50%{
+    left: -100%;
+  }
+  
+  75%{
+    left: -100%;
+  }
+  
+  95%{
+    left: -200%;
+  }
+  
+  100%{
+    left: -300%;
+  }
+  
+}
+
+@keyframes slider { /*------design the duration of how the animation should move------*/
+  0%{
+    left: 0;
+  }
+  
+  25%{
+    left: 0;
+  }
+  
+  
+  50%{
+    left: -100%;
+  }
+  
+  75%{
+    left: -100%;
+  }
+  
+  95%{
+    left: -200%;
+  }
+  
+  100%{
+    left: -300%;
+  }
+  
+}
+
+#slider{ /*------design the slider panel------*/
+  overflow: hidden;
+  width: 608px;
+  padding-left: 0;
+  padding-right: 0;
+  order:3;
+}
+
+#slider figure img{  /*------design img in the the slider panel------*/
+  width: 20;
+  float: left;
+}
+
+#slider figure {  /*------control the animation------*/
+  position: relative;
+  width: 300%;
+  margin: 0;
+  left: 0;
+  animation: 10s slider infinite;
+}
+
+/*---footer--*/
+#Top{   /*------design the "back to top" button------*/
+  border: 1px solid black;
+  background: yellow;
+  margin-left: 45%;
+  margin-right: 45%;
+  text-align: center;
+  order:6;
+}
+
+#Top a{ /*------design the "back to top" button------*/
+  text-decoration: none;
+}
+
+/* ---- */
+.menu ul { /*------design the menu------*/
+  border: 1px solid red;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  background-color: #55a5c3;
+  display: inline-block;
+  box-shadow: white -0.4em 0em 0.4em;
+  font-size: 20px;
+    z-index: 2;
+} 
+/*------design a tags for the menu------*/
+.menu a { 
+  border: 1px solid blue;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  background-color: #724951;
+  display: inline-block;
+  box-shadow: white -0.1em 0em 0.1em;
+  font-size: 20px;
+
+}
+
+/*------design the menu while howering------*/
+
+.menu a {
+  border: 1px solid white;
+  padding: 10px;
+  line-height: 1.2em;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #66bab1;
+  color: black;
+}
+
+.menu .sub {
+  position: absolute;
+}
+
+.menu .sub a:hover {
+  background-color: lightblue;
+}
+
+.menu .sub li {
+  overflow: hidden;
+  height: 0px;
+  transition: height 400ms;
+}
+
+.menu ul li:hover .sub li {
+  height: 40px;
+}
+
+/*---small--*/
+@media only screen and (max-width:800px){ /*------design how it should look when its less than 800 px------*/
+ 
+  #build{
+    width: 100%;
+    order:3;
+  }
+  #slider{
+    order:6;
+  }
+  #Video{
+    order: 4;
+  }
+  #invisibility {
+    order: 6;
+  }
+  
+  
+}
+
+@media only screen and (max-width:1200px){ /*------design how it should look when its less than 1200 px------*/
+  #Icon{
+    display: none;
+  }
+  #header-name{
+    display: none;
+  }
+}
+

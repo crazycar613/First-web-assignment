@@ -1,0 +1,250 @@
+body {/*------design the background image------*/
+  background-image: url(image/mainbg.jpg);
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: cover;
+  font-family: Georgia;
+}
+
+/*-----------------3 images-------------------------*/
+.image {/*------set the size of image------*/
+  border: 1px black;
+  margin: 5px;
+  padding: 15px;
+  width: auto;
+  height: auto;
+  opacity: 0.4;
+}
+
+.flex-container {/*------set the positon of images------*/
+  display: flex;
+  justify-content: space-between;
+}
+
+.image:hover {/*------set the effect of images------*/
+  transform: scale(1.25);
+  opacity: 1;
+  transition: opacity 400ms;
+}
+
+/*---------------------story-----------------------------*/
+#icon {/*------set the size of image which id is icon------*/
+  width: 500px;
+  height: 250px;
+}
+
+fieldset {/*------set the fieldset size------*/
+  border-radius: 10px;
+  padding: 0px 50px 50px 50px;
+  margin: 0px 50px 50px 50px;
+
+}
+
+.content {/*------set the the body panels------*/
+  background: hsl(106, 10%, 26%);
+  border-radius: 12px;
+  opacity: 0.9;
+  box-shadow: 4px 4px 15px 3px #000000;
+  padding: 15px;
+  margin: 5px;
+  color: #f8dd45;
+  font-size: 28px;
+}
+
+#video{/*------set the the positon of video------*/
+  float: left;
+  padding: 10px;
+}
+
+#content_img { /*------set the the positon of img which set in the content------*/
+  float: left;
+  padding: 10px;
+   display: none
+}
+
+#head_content {/*------set the the header in the content------*/
+  text-shadow: black 0.1em 0.1em 0.2em;
+  color: #b0b1cb;
+  font-size: 30px;
+}
+
+.viewmore { /*------set the the title------*/
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  text-shadow: white 0.1em 0.1em 0.2em;
+}
+
+/*<!------------------------menu------------------!>*/
+/*------design a tags for the menu------*/
+.menu ul {
+  border: 1px solid blue;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  background-color: #724951;
+  display: inline-block;
+  box-shadow: white -0.4em 0em 0.4em;
+  font-size: 20px;
+}
+/*------design the menu while howering------*/
+.menu a {
+  border: 1px solid white;
+  padding: 10px;
+  line-height: 1.2em;
+  color: white;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #66bab1;
+  color: black;
+}
+
+.menu .sub {
+  position: absolute;
+}
+
+.menu .sub a:hover {
+  background-color: lightblue;
+}
+
+.menu .sub li {
+  overflow: hidden;
+  height: 0px;
+  transition: height 400ms;
+}
+
+.menu ul li:hover .sub li {
+  height: 40px;
+}
+
+/*<!----------------------select page------------------!>*/
+.slide {
+  margin: 2 auto;
+  border: 1px solid black;
+  width: 720px;
+  background-color: black;
+  text-align: center;
+  display: none;
+}
+
+.slide img { /*------design the img------*/
+  max-width: 90%;
+}
+
+
+/*------design the button------*/
+.toolbar { 
+  overflow: hidden;
+  text-align: center;
+}
+
+.nav {
+  display: inline-block;
+  background-color: black;
+  font-size: 30px;
+}
+
+#prev {
+  margin: 0px 10px 0px 0px
+}
+
+.button {
+  float: left;
+  width: 40px;
+  height: 40px;
+  color: white;
+  border: 1px solid white;
+  margin: 0px 0px 0px 10px;
+  cursor: pointer;
+}
+/*------design the effact of img------*/
+#main_image{
+  opacity: 0.7;
+}
+
+#main_image:hover{
+  opacity: 1;
+  transition: opacity 400ms;
+}
+/*------design the num of page------*/
+#page {
+  font-size: 15px;
+  margin-top: 10px;
+  display: inline-block;
+  float: left;
+  color: white;
+}
+
+/*<!------------------------small------------------!>*/
+@media only screen and (max-width:700px) {
+  /*------design the new setting of content------*/
+  .content {
+    font-size: 28px;
+    height: 500px;
+    overflow: auto;
+  }
+
+  #content_img {  /*------display the img------*/
+    float: right;
+    padding: 8px;
+    height: 150px;
+    display: flex;
+    opacity: 1;
+  }
+  
+  #video{/*------hidden the video------*/
+    display: none;
+  }
+
+  #head_content {/*------reset the header size------*/
+    font-size: 16px;
+  }
+
+  fieldset {/*------reset the fieldset size------*/
+    border-radius: 10px;
+    padding: 0px 20px 20px 20px;
+    margin: 0px 20px 20px 20px;
+
+  }
+
+  #icon {/*------reset the icon size------*/
+    width: 250px;
+    height: 150px;
+  }
+
+  /*<!------------------------small menu------------------!>*/
+  .menu ul {/*------reset the menu size------*/
+    font-size: 15px;
+    width: 120px;
+  }
+
+
+  .flex-container {
+    justify-content: flex-start;
+  }
+
+  .image {
+    display: none;
+  }
+
+  /*<!------------------------display the select page------------------!>*/
+  .slide{
+    display: contents;
+  }
+  
+  #heroName{
+    margin: 0px 0px 5px 0px;
+    text-shadow: 2px 0.9px 9px white;
+  }
+  
+  .slide .content{
+    height: 380px
+  }
+}
+
+

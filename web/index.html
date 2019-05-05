@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <link rel="stylesheet" href="main1.css" type="text/css">
+</head>
+<body>
+  <!------------------------menu------------------>
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="#">Official</a> 
+        <ul class="sub">
+          <li><a href="https://lol.garena.tw/preindex">Taiwan</a></li>
+          <li><a href="https://lol.qq.com/">China</a></li>
+          <li><a href="https://jp.leagueoflegends.com/ja/">Japan</a></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <ul>
+      <li>
+        <a href="#">Hero</a>
+        <ul class="sub">
+          <li><a href="New.html">Teemo</a></li>
+          <li><a href="Lulu.html">Lulu</a></li>
+          <li><a href="Veigar.html">Veigar</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="News.html">News</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="quest.html">Questionnaire</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <div align="center"><img id="icon" src="image/league.png" alt=""></div>
+
+  <!------------------------content------------------>
+  <fieldset>
+    <legend>
+      <div id="head_content">
+        <h2><b><i>The History of Yordle</i></b></h2>
+      </div>
+    </legend>
+
+    <div class="content">
+        <img id="content_img" src="image/head.jpg" alt="">
+         <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/y6e9ECK89Xg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      The origin of this race on Runeterra is unknown but most would agree that Yordles resided on
+      Valoran during its prehistoric times. At that time they were a nomadic race, travelling from one part of Valoran to the other. Records show they had presence in Ancient Freljord. They lived in tight neat family groups as well as near early humans. Because of their small stature, they were mostly prey for many animals. During prehistoric times they had tails and front canine teeth.
+      Overtime as human civilizations advanced, so did yordles appearances and capabilities. To easily blend in human areas, yordles at one point started using an ability called "Glamour", which gave them the appearance of a small stature humans.
+
+      To this day, most yordles stay inside the mystical place known as Bandle City, only venturing out on rare occasions. There are numerous gateways across Runeterra that yordles, and others more knowledgeable and perceptive, are able to use to get to in and out of Bandle City.</div>
+  </fieldset>
+
+  <div class="viewmore">Click the image to view more detail</div>
+  <!------------------------image------------------>
+  <div class="flex-container">
+    <div class="image" id="lulut" order=1><a href="Lulu.html"><img src="image/lulut.png" alt="" width="300" height="300"></a></div>
+    <div class="image" id="Teemot" order=2><a href="New.html"><img src="image/Teemot.png" alt="" width="300" height="300"></a></div>
+    <div class="image" id="weika" order=3><a href="Veigar.html"><img src="image/weika.png" alt="" width="300" height="300"></a></div>
+  </div>
+
+  <!------------------------select page------------------>
+   <div class="slide">
+   <div class="content">
+   <div id="heroName">Lulu</div>
+    <div class="image_box">
+      <a id="web" href="Lulu.html"><img id="main_image" src="assignment/maxresdefault.jpg" alt=""></a>
+    </div>
+    <div class="toolbar">
+      <div class="nav">
+        <div id="prev" class="button">←</div>
+        <span id="page"></span>
+        <div id="next" class="button">→</div>
+      </div>
+    </div>
+  </div>
+  </div>
+   
+
+  <script>
+    /*------set the imgs in a array------*/
+  var images=['assignment/maxresdefault.jpg','assignment/Teemo_OriginalCentered.jpg','assignment/Veigar_OriginalCentered.jpg'];
+    /*------set the links in a array------*/
+  var webs=['Lulu.html','New.html','Veigar.html'];
+  var current = 0;
+    /*------function to display the num of img------*/
+    function pageNum() {
+      document.getElementById('page').textContent = (current + 1) + '/' + images.length;
+    }
+    /*------function to change img and name------*/
+    var changeImage = function(num){
+      var Hname = ["Lulu","Teemo","Veigar"];
+      var hero = document.querySelector('#heroName');
+      if(current+num >= 0 && current + num < images.length){
+        current+=num;
+        document.getElementById('main_image').src= images[current];
+        document.getElementById('web').href= webs[current];
+         hero.innerHTML = Hname[current];
+        pageNum();
+      }
+    };
+    
+    pageNum();
+    /*------Trigger event------*/
+    document.getElementById('prev').onclick = function(){
+       changeImage(-1);
+    };
+    document.getElementById('next').onclick = function(){
+      changeImage(1);
+    };
+  </script>
+
+</body>
+
+</html>

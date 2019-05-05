@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News</title>
+  <link rel="stylesheet" href="News.css" type="text/css">
+</head>
+<body>
+ 
+ <!----------------------- MENU ---------------------------------->
+  <div class="menu">
+    <ul>
+      <li>
+        <a href="#">Official</a>
+        <ul class="sub">
+          <li><a href="https://lol.garena.tw/preindex">Taiwan</a></li>
+          <li><a href="https://lol.qq.com/">China</a></li>
+          <li><a href="https://jp.leagueoflegends.com/ja/">Japan</a></li>
+        </ul>
+      </li>
+    </ul>
+    
+    <ul>
+      <li>
+        <a href="#">Hero</a>
+        <ul class="sub">
+          <li><a href="New.html">Teemo</a></li>
+          <li><a href="Lulu.html">Lulu</a></li>
+          <li><a href="Veigar.html">Veigar</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="index.html">Main page</a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="quest.html">Questionnaire</a>
+      </li>
+    </ul>
+  </div>
+<!------------------------title------------------>
+<div class="title"><b>News</b></div>
+
+<!------------------------content------------------>
+<div class="content">
+  <div class="gap">
+    <div class="header"><b><i>IG won the LPL spring championship!!!</i></b></div>
+    <br>
+    <!------------------------display img------------------>
+     <img  id="photo" src="news/ig1.jpg" alt="">
+     <div class="select">
+      <div class="R R2" id="r1"></div>
+      <div class="R" id="r2"></div>
+      <div class="R" id="r3"></div>
+    </div>
+      <!------------------------content of news------------------>
+      <div class="News1">
+        The League of Legends S9 season LPL spring game finals came to an end, this world-class squad. IG beat JDG in a three-to-zero posture, let us toast with a congratulation, congratulations IG! And each side of this visual festival has also made every effort to solve all kinds of operations and tactics.
+      </div>
+  </div>
+  <br>
+  <hr>
+  <br> 
+   <!------------------------content------------------>
+    <div class="gap">
+    <div class="header"><b><i>RNG wins MSI championship!!!</i></b></div>
+    <br>
+     <!------------------------display img------------------>
+     <img  id="photo2" src="news/RNG1.jpg" alt="">
+     <div class="select">
+      <div class="I I2" id="i1"></div>
+      <div class="I" id="i2" ></div>
+      <div class="I" id="i3"></div>
+    </div>
+     <!------------------------content of news------------------>
+      <div class="News1">
+        2018 "League of Legends" MSI Mid-season Invitational Championships kicked off today (20th), LPL Division Representative Royal Never Give Up (RNG) defeated LCK Spring Champion KING-ZONE DragonX (KZ) with a beautiful 3:1 record 2018 MSI Mid-season champion!
+      </div>
+  </div>
+  <br>
+  <hr>
+  <br> 
+   <!------------------------content------------------>
+    <div class="gap">
+    <div class="header"><b><i>Establishment of the SKT Dynasty!!!</i></b></div>
+    <br>
+    <!------------------------display img------------------>
+     <img  id="photo3" src="news/SKT1.jpg" alt="">
+     <div class="select">
+      <div class="F F2" id="f1"></div>
+      <div class="F" id="f2" ></div>
+      <div class="F" id="f3"></div>
+    </div>
+    <!------------------------content of news------------------>
+      <div class="News1">
+        2018 "League of Legends" MSI Mid-season Invitational Championships kicked off today (20th), LPL Division Representative Royal Never Give Up (RNG) defeated LCK Spring Champion KING-ZONE DragonX (KZ) with a beautiful 3:1 record 2018 MSI Mid-season champion!
+      </div>
+  </div>
+  </div>
+  
+  
+  <script>
+    var current = 0;
+    var current2 = 0;
+    var current3 = 0;
+    /*------function to change the first news img------*/
+    function changeIG(num){
+    /*------set the imgs in a array------*/
+    var IGimg = ['news/ig1.jpg','news/ig2.jpg','news/ig3.jpg'];
+      /*------find the class is R------*/
+    var objbutton = document.querySelectorAll('.R');
+    /*------change the img------*/
+    document.getElementById('photo').src= IGimg[num];
+    /*------modify the class------*/
+    objbutton[current].classList.remove("R2");
+    objbutton[num].classList.add("R2");
+    current = num;
+    }
+    /*------function to change the second news img------*/
+    function changeRNG(num){
+      /*------set the imgs in a array------*/
+      var RNGimg = ['news/RNG1.jpg','news/RNG2.jpg','news/RNG3.jpg'];
+       /*------find the class is I------*/
+      var objbutton2 = document.querySelectorAll('.I');
+      /*------change the img------*/
+      document.getElementById('photo2').src= RNGimg[num];
+       /*------modify the class------*/
+      objbutton2[current2].classList.remove("I2");
+      objbutton2[num].classList.add("I2");
+      current2 =num;
+    }
+     /*------function to change the last news img------*/
+    function changeSKT(num){
+      /*------set the imgs in a array------*/
+      var SKTimg=['news/SKT1.jpg','news/SKT2.jpg','news/SKT3.jpg'];
+      /*------find the class is F------*/
+      var objbutton3 = document.querySelectorAll('.F');
+      /*------change the img------*/
+      document.getElementById('photo3').src= SKTimg[num];
+      /*------modify the class------*/
+      objbutton3[current3].classList.remove("F2");
+      objbutton3[num].classList.add("F2");
+      current3 = num;
+    }
+    /*------Trigger event------*/
+    document.getElementById('r1').onclick = function(){
+       changeIG(0);
+    };
+    document.getElementById('r2').onclick = function(){
+      changeIG(1);
+    };
+    document.getElementById('r3').onclick = function(){
+      changeIG(2);
+    };
+    
+    document.getElementById('i1').onclick = function(){
+       changeRNG(0);
+    };
+    document.getElementById('i2').onclick = function(){
+       changeRNG(1);
+    };
+    document.getElementById('i3').onclick = function(){
+       changeRNG(2);
+    };
+    
+    document.getElementById('f1').onclick = function(){
+       changeSKT(0);
+    };
+    document.getElementById('f2').onclick = function(){
+       changeSKT(1);
+    };
+    document.getElementById('f3').onclick = function(){
+       changeSKT(2);
+    };
+      
+  </script>
+  
+
+
+</body>
+</html>
